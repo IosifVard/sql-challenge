@@ -1,0 +1,34 @@
+1	departments
+2	-
+3	dept_no Varchar pk
+4	dept_name Varchar(25)
+5
+6	dept_manager
+7	-
+8	dept_no Varchar(10) pk FK >- departments.dept_no
+9	emp_no int pk FK >- Employees.emp_no
+10	
+11	dept_emp
+12	-
+13	emp_no int pk FK >- Employees.emp_no
+14	dept_no Varchar(10) pk FK >- departments.dept_no
+15	
+16	Employees
+17	-
+18	emp_no int pk FK >- salaries.emp_no
+19	emp_title_id Varchar(10)
+20	birth_date Date
+21	first_name Varchar(25)
+22	last_name Varchar(25)
+23	sex Char(1)
+24	hire_date Date
+25	
+26	salaries
+27	-
+28	emp_no int pk
+29	salary int
+30	
+31	titles
+32	-
+33	title_id Varchar(10) pk FK >- Employees.emp_title_id
+34	title Varchar(25)
